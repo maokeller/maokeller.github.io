@@ -1,1 +1,119 @@
-Hello World
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mao Keller Wedding</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+        
+        <script type="text/javascript">
+            // When the window has finished loading create our google map below
+            google.maps.event.addDomListener(window, 'load', init);
+        
+            function init() {
+                // Basic options for a simple Google Map
+                // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+                var mapOptions = {
+                    // How zoomed in you want the map to start at (always required)
+                    zoom: 14,
+
+                    // The latitude and longitude to center the map (always required)
+                    center: new google.maps.LatLng(40.722590, -73.992880), // New York
+
+                    // How you would like to style the map. 
+                    // This is where you would paste any style found on Snazzy Maps.
+                    styles: [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#e9e9e9"},{"lightness":17}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#ffffff"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":16}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":21}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#dedede"},{"lightness":21}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":16}]},{"elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#333333"},{"lightness":40}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#f2f2f2"},{"lightness":19}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#fefefe"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#fefefe"},{"lightness":17},{"weight":1.2}]}]
+                };
+
+                // Get the HTML DOM element that will contain your map 
+                // We are using a div with id="map" seen below in the <body>
+                var mapElement = document.getElementById('map');
+
+                // Create the Google Map using our element and options defined above
+                var map = new google.maps.Map(mapElement, mapOptions);
+
+                // Let's also add a marker while we're at it
+                var marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(40.722590, -73.992880),
+                    map: map,
+                    title: 'Snazzy!'
+                });
+            }
+        </script>
+</head>
+<body>
+<!-- Wrapper-->
+			<div id="wrapper">
+
+				<!-- Nav -->
+					<nav id="nav">
+						<a href="#me" class="icon fa-home active"><span>Home</span></a>
+						<a href="#wedding" class="icon fa-heart-o"><span>Wedding</span></a>
+						<!-- <a href="#location" class="icon fa-map-marker"><span>Location</span></a> -->
+						<a href="#registry" class="icon fa-shopping-bag"><span>Registry</span></a>
+						<a href="#contact" class="icon fa-envelope"><span>Contact</span></a>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Me -->
+							<article id="me" class="panel">
+								<header>
+									<h1>Mao Keller Wedding</h1>
+									<p class="title-copy">Welcome to Dara Mao and Andreas Keller's wedding site</p>
+								</header>
+								<a href="#wedding" class="jumplink pic">
+									<span class="arrow icon fa-chevron-right"><span>See my work</span></span>
+									<img src="images/together2.jpg" alt="" />
+								</a>
+							</article>
+
+						<!-- Work -->
+							<article id="wedding" class="panel">
+								<header>
+									<h2>Wedding</h2>
+								</header>
+								<p>
+								Our wedding will be held at the <a href="http://www.newmuseum.org/" class="link-copy" target="_blank"><span class="emphasis-text">New Musuem</span></a> in New York City on April 16, 2016 at 6:30pm.
+								</p>
+								<p>
+								Location: 235 Bowery, New York, NY 10002
+								</p>
+
+								 <div id="map"></div>
+			
+							</article>
+
+							<article id="registry" class="panel">
+								<header>
+									<h2>Wedding Registry</h2>
+								</header>
+								<p>Dear friends and family, </p>
+								<p>Welcome to our wedding registry. If you want to give us a gift and need inspiration, please look below. We are looking forward to seeing you all on our big day! We are still adding gift ideas here, so come back on February 1st, when we will have completed the registry.</p>
+								<a href="https://www.zola.com/registry/maokeller" target="_blank" class="link-copy emphasis-text">www.zola.com/registry/maokeller</a>
+							</article>
+
+						<!-- Contact -->
+							<article id="contact" class="panel">
+								<header>
+									<h2>Contact Us</h2>
+								</header>
+								<a href="mailto:dara.mao@gmail.com?cc=andreasbkeller@gmail.com&subject=Big%20News" target="_top" class="link-copy emphasis-text">Send us a note by email !</a>
+							</article>
+					</div>
+
+			</div>
+
+
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/skel-viewport.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+</body>
+</html>
